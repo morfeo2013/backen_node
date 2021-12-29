@@ -136,7 +136,7 @@ LogingUsuario.ingresar = async(req, res) => {
                             id: copiaModeloDeBacken._id,
                             /* utiliza la propiedad heredada para asignar el id  */
                             token /* envia el token del id valido */ ,
-                            contadorFavoritos: copiaModeloDeBacken.contadorFavoritos
+                           
                         })
 
                 } else {

@@ -11,15 +11,9 @@ const LoginglTabla= new Schema({
   
 
     nombre: String,
-    cedula: String,
-    contacto: String,
-    direccion: String,
-    ciudad: String,
     correo: String,
     contrasena: String,
-    admin:String,
-    recuperacion:String,
-    contadorFavoritos:Number,
+    admin:0,
    user2: [{type:Schema.Types.ObjectId,ref:'user2'}] /* para relacionar el pbjeto de favoritos de la tabla usuario a la loging */
     
 },{

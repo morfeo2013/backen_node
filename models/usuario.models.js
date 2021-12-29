@@ -11,10 +11,10 @@ const {Schema}=mongoose/* se crea el esquema de la base de datos */
 const NuevoModelTabla=new Schema({
   
 
-    titulo: String,
-    autor: String,
-    genero: String,
-    ficha: String,
+    nombre: String,
+    descripcion: String,
+    precio: String,
+    estrella: String,
     imagen:String,
  
     imagenURL:String
