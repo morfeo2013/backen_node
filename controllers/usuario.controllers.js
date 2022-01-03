@@ -20,7 +20,7 @@ cloudinary.config({
 
 
 
-/* req es entrada del fronrnent 
+/* req es entrada del frontent 
     y res es la salida del bakend */
 
 
@@ -28,7 +28,7 @@ cloudinary.config({
 
 /* se crean las funciones que se envian al archivo routes.js */
 UserCtrl2.leer = async(req, res) => {
-    /* res.send('hola mundo')  */
+    
 
     /* creo una constante y le asigno el valor de guardarmodelo2  esta se le agrega la propiedadd  .find */
     /* esta le permite recorer y extraer  todos los json guardados */
