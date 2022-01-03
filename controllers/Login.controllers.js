@@ -23,14 +23,19 @@ const { link } = require('fs-extra')
 
 
 /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
 /* SE CREA EL REGISTRO PRIMERO E INGRESA AUTOMATICAMENTE*/
+
+
+
 
 /*  const nuevoLogings = new Guardarmodelo1({ nombre, correo, contrasena,cedula,contacto,direccion,ciudad,admin,user2 }) /* si no existe asignelo a un nuevo modelo
      este heredara todas las funciones del modelo  */
 
 LogingUsuario.registrar = async(req, res) => {
     /* primero se especifica lo que esta en el loging.models.js */
-    const { nombre, correo, contrasena, cedula, contacto, direccion, ciudad, admin, user2, contadorFavoritos } = req.body /* se ecuentra en el req del body que secibio del frontend*/
+    const { nombre, correo, contrasena } = req.body /* se ecuentra en el req del body que secibio del frontend*/
 
 
     /* SE HARA UNA VERIFICACION EN LA BASE DE DATOS DI EL CORREO INGRESADO ESTA YA CREADO */
@@ -42,7 +47,8 @@ LogingUsuario.registrar = async(req, res) => {
         res.json({ mensage: 'correo ya existe' })
 
     } else {
-        const nuevoLogings = new Guardarmodelo1({ nombre, correo, contrasena, cedula, contacto, direccion, ciudad, admin, user2, contadorFavoritos })
+       
+        const nuevoLogings = new Guardarmodelo1({ nombre, correo, contrasena,admin:'' })
             /* si no existe asignelo a un nuevo modelo
                 este heredara todas las funciones del modelo */
 
