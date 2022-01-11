@@ -16,7 +16,7 @@ const NuevoModelTabla=new Schema({
     precio: String,
     estrella: String,
     imagen:String,
- 
+    correo:String,
     imagenURL:String
 },{
     timestamps:true/* crea informacion de la fecha de creacion  */
