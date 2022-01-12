@@ -172,16 +172,17 @@ UserCtrl2.borrar = async(req, res) => {
 UserCtrl2.crear = async(req, res) => {
     /* res.send('CREAR USUARIO funcion post') */
     /* recivira la informacion por el post del fronen y la guardara en la constarte de un objeto usando el req */
-    const { titulo, autor, genero, ficha, imagen, imageURL } = req.body /* estos corresponde a los del models.js que llegan del frontend*/
+    const { nombre, descripcion,precio, estrella,correo, imagen, imageURL } = req.body /* estos corresponde a los del models.js que llegan del frontend*/
     console.log(req.body)
     const resultado = await cloudinary.v2.uploader.upload(req.file.path)
     console.log(resultado)
         /* se crea un nuevo modelo utilizando el que esta en la direccion Guardarmodelo2 asignando la informacion*/
     const nuevousuario = new Guardarmodelo2({
-        titulo,
-        autor,
-        genero,
-        ficha,
+        nombre,
+        descripcion,
+        precio,
+        estrella,
+        correo,
         imagen: resultado.secure_url,
         /* para que lo suba como htpps */
         imagenURL: resultado.public_id
