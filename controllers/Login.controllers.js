@@ -435,5 +435,27 @@ LogingUsuario.pruebadelete = async (req, res) => {
   }
 };
 
+
+LogingUsuario.modificar  = async (req, res) => {
+
+
+  const identificador = req.params.indexUsuario;
+  const   admin  =req.params.admin; /* sacar los datos quese necesitan del req body modifica el usuario con el id Sin Imagen*/
+    await Guardarmodelo1.findByIdAndUpdate(
+      { _id: identificador },
+      /* busca ese id en la base de datos comparando el _id
+       */
+      {
+       admin
+      }
+    ); /* actualice todo lo que le llegue por el req.body osea todos los nuevos datos json a el _id encontrado  con  findByIdAndUpdate*/
+    res.json({
+      mensaje:
+        "Mensaje desde el Backend:Usuario agregado como Administrador",
+    });
+
+
+}
+
 module.exports =
   LogingUsuario; /* para poder exportarlo y ser utilizado en otros archivos */

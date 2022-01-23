@@ -11,7 +11,7 @@ route.get('/favoritos/:id', LogingUsuario.leeridFavoritos) /* realizar la petici
 route.post('/registrar', LogingUsuario.registrar)
 route.post('/ingresar', LogingUsuario.ingresar)
 
-
+route.put('/modificar/:indexUsuario/:admin',LogingUsuario.modificar )/* se selecciona la funcion que coresponde con la orden se adiciona el :index  para operaciones de modificacion de clientes */
 
 
 
