@@ -7,7 +7,7 @@ const auth = require('../helper/auth')
 
 route.get('/listarUsuarios/', auth.verificartoken, LogingUsuario.listarusuarios) /* realizar la peticion get,put,delete,pos creadasen el controlls*/
 route.get('/mostrar/:id', auth.verificartoken, LogingUsuario.loginId) /* realizar la peticion get,put,delete,pos creadasen el controlls*/
-route.get('/favoritos/:id', LogingUsuario.leeridFavoritos) /* realizar la peticion get,put,delete,pos creadasen el controlls*/
+
 route.post('/registrar', LogingUsuario.registrar)
 route.post('/ingresar', LogingUsuario.ingresar)
 
@@ -17,10 +17,10 @@ route.put('/modificar/:indexUsuario/:admin',LogingUsuario.modificar )/* se selec
 
     /* route.delete('/eliminar/:indexUsuario',UserControl.borrar ) */
 route.delete('/eliminarUsuario/:indexUsuario', LogingUsuario.borrar)
-route.delete('/borrarFavoritos/:dir/:producto', LogingUsuario.borrarFavoritos) /* para pasar dos valores por el params */
 
+route.get('/favoritos/:id', LogingUsuario.leeridFavoritos) /* realizar la peticion get,put,delete,pos creadasen el controlls*/
 route.put('/agregarfavorito/:indexUsuario', LogingUsuario.loginIdFavoritos)
-
+route.delete('/borrarFavoritos/:dir/:producto', LogingUsuario.borrarFavoritos) /* para pasar dos valores por el params */
 
 //pruebas
 route.delete('/pruebas', LogingUsuario.pruebadelete)
