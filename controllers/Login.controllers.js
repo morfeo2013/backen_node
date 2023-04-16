@@ -81,7 +81,7 @@ LogingUsuario.ingresar = async (req, res) => {
   /* solo nesecita el correo y la contrasena para logiarse */
   const { correo, contrasena } = req.body; /* se ecuentra en el req del body */
 
-  /* SE HARA UNA VERIFICACION EN LA BASE DE DATOS DI EL CORREO INGRESADO ESTA YA CREADO */
+  /* SE HARA UNA VERIFICACION EN LA BASE DE DATOS DE EL CORREO INGRESADO ESTA YA CREADO */
   /* copiaModeloDeBacken hereda la informacion de la base de datos (nombre,correo,contrasena)*/
   const copiaModeloDeBacken = await Guardarmodelo1.findOne({ correo: correo });
   /* tome de la base de datos Guardarmodelo1 la propiedad correo y comparelo con el dato ingresdo desde el frontend con la propiedad correo (correo:correo) */
